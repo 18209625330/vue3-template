@@ -1,17 +1,5 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import store from '@/store/index';
-// const routes: Array<RouteRecordRaw> = [
-//   {
-//     path: '/',
-//     name: 'home',
-//     component: HomeView
-//   },
-//   {
-//     path: '/about',
-//     name: 'about',
-//     component: () => import( '../views/AboutView.vue')
-//   }
-// ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),//在vue.config.js中的publicPath中配置根目录
@@ -53,7 +41,7 @@ function setOneRoutes(data: RouteRecordRaw[]) {
 }
 
 
-//使用setTimeout模拟异步请求数据
+//使用setTimeout模拟setTimeout
 setTimeout(()=>{
   //服务端接口请求的数据源
   const routesData=[
